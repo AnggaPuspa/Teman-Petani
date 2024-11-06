@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles/forumStyle.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar Scroll -->
+    <div class="navbar-scroll" id="navbar-scroll">
+        <div class="navbar-scroll-container">
+            <div class="navbar-left-scroll">
+                TemanPetani
+            </div>
+            <div class="navbar-center-scroll">
+                <a href="../index.html">Beranda</a>
+                <a href="./articlePages.html">Artikel</a>
+                <a href="./calculatorPages.html">Kalkulator</a>
+                <a href="./forumPages.html" class="link-active">Forum</a>
+            </div>
+            <div class="navbar-right-scroll">
+                <a href="../index.html#contactSection">Kontak</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdown-menu">
+        <button class="close-button" id="close-button">&times;</button>
+        <a href="#">Artikel</a>
+        <a href="./calculatorPages.html">Kalkulator</a>
+        <a href="./forumPages.html">Forum</a>
+    </div>
+
+    <div class="forum-container">
+        <!-- Panel Kiri -->
+        <div class="left-panel">
+            <button id="add-discussion" class="btn-start">Mulai Diskusi Baru</button>
+
+            <div class="card">
+                <h4>Kategori</h4>
+                <ul class="list-group">
+                    <li class="list-group-item filter" data-filter="semua">Semua (<span class="total-count">0</span>)</li>
+                    <li class="list-group-item filter" data-filter="terbaru">Terbaru (<span class="terbaru-count">0</span>)</li>
+                    <li class="list-group-item filter" data-filter="hangat">Hangat (<span class="hangat-count">0</span>)</li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <!-- Panel Kanan -->
+        <div id="discussion-list" class="right-panel">
+            <!-- Contoh Kartu Diskusi -->
+            <div class="card topic-card" data-category="terbaru">
+                <img class="topic-image" src="/assets/images/Ilustrasi-Petani-1.jpg" alt="Foto Topik Diskusi">
+
+
+                <div class="topic-info">
+                    <div class="topic-header">
+                        <h5 class="topic-title">Cara Mengatasi Hama Padi tanpa Pestisida</h5>
+                        <div class="verification">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Terverifikasi oleh ahli</span>
+                        </div>
+                    </div>
+                    <p>Dalam diskusi ini, kita akan membahas berbagai metode untuk mengatasi hama padi tanpa menggunakan
+                        pestisida.</p>
+                    <div class="comments" style="cursor: pointer;">
+                        <i class="far fa-comment"></i>
+                        <span>3 Komentar</span>
+                    </div>
+
+
+                    <div class="comment-section" style="display: none;">
+                        <div class="comment-list">
+                            <!-- Komentar Dummy -->
+                            <div class="comment-card">
+                                <img src="/assets/images/u1.jpg" alt="Foto Pengguna" class="comment-profile">
+                                <div class="comment-content">
+                                    <div class="comment-name">Mas aryo</div>
+                                    <p>saran obat buat bunuh hama di padi</p>
+                                </div>
+                            </div>
+                            <div class="comment-card">
+                                <img src="/assets/images/images (8).jpg" alt="Foto Pengguna" class="comment-profile">
+                                <div class="comment-content">
+                                    <div class="comment-name">doni</div>
+                                    <p>jadi apa metode nya bang?</p>
+                                </div>
+                            </div>
+                            <div class="comment-card">
+                                <img src="/assets/images/ppi.jpg" alt="Foto Pengguna" class="comment-profile">
+                                <div class="comment-content">
+                                    <div class="comment-name">yoga</div>
+                                    <p>baikgan</p>
+                                </div>
+                            </div>
+                           
+                    
+                        
+                        <div class="new-comment-card">
+                            <div class="input-container">
+                                <input type="text" class="new-comment" placeholder="Tulis komentar...">
+                                <button class="send-button add-comment"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+<div id="discussion-modal" class="modal">
+    <div class="modal-content">
+        <label   class="form-label" for="discussion-title">Judul</label>
+        <input type="text" id="discussion-title" placeholder="" class="form-input">
+        <label class="form-label" for="discussion-content">Isi</label>
+        <textarea id="discussion-content" placeholder="" class="form-input" rows="4"></textarea>
+        <button id="submit-discussion" class="btn-submit">Buat</button>
+        <button class="btn-cancel close-modal">Batal</button>
+    </div>
+</div>
+
+
+
+
+  <script src="../scripts/forumScripts.js"></script>
+  <script>
+      var image = document.getElementById("topic-image");
+      image.style.display = "none";
+  </script>
+
+  </script>
+</body>
+
+</html>

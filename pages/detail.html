@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/articleDetailStyles.css">
+</head>
+
+<body>
+       <!-- Navbar Scroll -->
+		<div class="navbar-scroll" id="navbar-scroll">
+			<div class="navbar-scroll-container">
+				<div class="navbar-left-scroll">
+					TemanPetani
+				</div>
+				<div class="navbar-center-scroll">
+					<a href="../index.html">Beranda</a>
+					<a href="./articlePages.html" class="link-active">Artikel</a>
+					<a href="./calculatorPages.html">Kalkulator</a>
+					<a href="./forumPages.html">Forum</a>
+				</div>
+				<div class="navbar-right-scroll">
+					<a href="../index.html#contactSection">Kontak</a>
+				</div>
+				<div class="hamburger" id="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	
+		<!-- Dropdown Menu -->
+		<div class="dropdown-menu" id="dropdown-menu">
+			<button class="close-button" id="close-button">&times;</button>
+			<a href="#">Artikel</a>
+			<a href="#">Kalkulator</a>
+			<a href="#">Forum</a>
+	
+		</div>
+	
+
+
+    <section class="article-detail">
+        <div class="container"> 
+            <div class="article-content-wrapper">
+                <!-- Konten Artikel -->
+                <div class="article-main-content" id="articleContent">
+                    <h1>Pupuk Organik vs. Pupuk Kimia, Mana yang Lebih Baik untuk Padi?</h1>
+                    <!-- Isi artikel akan dimasukkan di sini -->
+                </div>
+    
+                <!-- Kolom Samping untuk Berita Terkait -->
+                <div class="article-sidebar">
+                    <h3>Artikel untuk Anda</h3>
+                    <div class="related-articles" id="relatedArticles">
+                        <!-- Artikel terkait akan ditampilkan di sini -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-container">
+          <div class="footer-content">
+            <p class="website-name">TemanPetani</p>
+            <p class="footer-text">Petani sejahtera, negara sejahtera.</p>
+          </div>
+          <div class="footer-content">
+            <p class="website-name">Tentang</p>
+            <div class="footer-links">
+              <a href="../index.html">
+                <p>Beranda</p>
+              </a>
+              <a href="../index.html">
+                <p>Tentang</p>
+              </a>
+              <a href="../index.html">
+                <p>Artikel</p>
+              </a>
+              <a href="../index.html">
+                <p>Testimoni</p>
+              </a>
+              <a href="../index.html#contactSection">
+                <p>Kontak</p>
+              </a>
+            </div>
+          </div>
+          <div class="footer-content">
+            <p class="website-name">Halaman Detail</p>
+            <div class="footer-links">
+              <a href="../index.html">
+                <p>Beranda</p>
+              </a>
+              <a href="#">
+                <p>Artikel</p>
+              </a>
+              <a href="./calculatorPages.html">
+                <p>Kalkulator</p>
+              </a>
+              <a href="./forumPages.html">
+                <p>Forum</p>
+              </a>
+            </div>
+          </div>
+          <div class="footer-content">
+            <p class="website-name">Kontak</p>
+            <div class="footer-links">
+              <a href="info@temanpetani.com">
+                <p>info@temanpetani.com</p>
+              </a>
+              <p>+52 123 654 7890</p>
+              <p>Jl. Tukad Citarum Gang X. No 23</p>
+            </div>
+          </div>
+        </div>
+        <p
+          class="copyright"
+          style="
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            opacity: 0.8;
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+          "
+        >
+          Copyright © <span>TemanPetani</span> | Developed by
+          <span>Pemuda HTML.</span>
+        </p>
+      </section>
+    
+    <script src="../scripts/global.js"></script>
+    <script>
+        // Ambil ID artikel dari query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get("articlesId");
+
+        // Data artikel yang bisa diubah dinamis
+        const articlesData = [
+            {
+                id: 1,
+                subtitle: "Pertanian",
+                category: "POPULAR",
+                img: "../assets/images/Blog-Penggerek-Batang-Padi.jpeg",
+                title: "Mengenal Hama Penggerek Batang Padi dan Cara Pengendaliannya",
+                content: `
+                    <p>Penggerek batang padi merupakan hama yang menyerang tanaman padi, khususnya pada bagian batang dan daun. Hama ini sangat merugikan karena dapat mengurangi hasil panen hingga 50%. Penggerek batang padi dapat menyebabkan tanaman menjadi layu, kering, dan akhirnya mati. Biasanya, hama ini menyerang pada fase vegetatif hingga generatif tanaman padi.</p>
+                    <p>Untuk mengatasi hama ini, beberapa cara pengendalian bisa dilakukan. Pertama, menggunakan pestisida kimia yang efektif untuk membunuh larva penggerek batang. Namun, penggunaan pestisida kimia sebaiknya dibatasi karena dapat merusak ekosistem sekitar dan mencemari lingkungan. Alternatif kedua adalah menggunakan pestisida nabati yang lebih ramah lingkungan dan dapat mengurangi dampak negatif terhadap kesehatan manusia dan hewan.</p>
+                    <p>Metode pengendalian organik lebih dianjurkan untuk mengurangi dampak negatif penggunaan bahan kimia. Beberapa metode pengendalian organik yang dapat dilakukan antara lain dengan menggunakan tanaman penghalang, seperti tanaman jagung atau kacang-kacangan yang dapat mengusir hama penggerek batang padi. Selain itu, penggunaan parasitoid dan predator alami seperti Trichogramma dan kumbang pemakan telur penggerek batang juga sangat efektif dalam mengendalikan populasi hama.</p>
+                `,
+                author: "Admin Teman Petani",
+                date: "06 November 2024"
+            },
+            {
+                id: 2,
+                subtitle: "Pertanian",
+                category: "POPULAR",
+                img: "../assets/images/_Strategi-Pemanfaatan-Lahan-Sempit-Pinggiran-Kota-dengan-Budidaya-Tanaman-Sayuran_15878.jpg",
+                title: "Alternatif Budidaya Tanaman Sayuran di Lahan Terbatas",
+                content: `
+                <p>Budidaya tanaman sayuran di lahan terbatas di daerah perkotaan kini menjadi solusi yang semakin populer. Banyak lahan sempit, seperti pekarangan rumah, atap gedung, atau bahkan lahan kosong pinggiran kota, dapat dimanfaatkan untuk menanam sayuran yang dapat memenuhi kebutuhan pangan sehari-hari. Hal ini menjadi sangat relevan dengan semakin meningkatnya kebutuhan pangan seiring dengan pertumbuhan jumlah penduduk yang pesat.</p>
+        
+                <p>Beberapa teknik pertanian yang cocok untuk lahan terbatas antara lain pertanian vertikal, hidroponik, dan aquaponik. Pertanian vertikal memungkinkan tanaman tumbuh dalam lapisan-lapisan bertingkat, menghemat ruang dan mengoptimalkan penggunaan lahan vertikal. Teknik ini sangat cocok untuk pekarangan rumah atau bahkan di dalam ruangan yang terbatas sinar matahari.</p>
+        
+                <p>Selain itu, hidroponik adalah metode budidaya tanaman tanpa menggunakan tanah, melainkan dengan memanfaatkan air yang mengandung larutan nutrisi. Teknik ini memungkinkan tanaman tumbuh dengan lebih efisien, mengurangi penggunaan air dan tanah, serta sangat cocok untuk lingkungan perkotaan yang padat. Hidroponik bisa dilakukan di dalam rumah menggunakan wadah-wadah kecil atau sistem rak vertikal.</p>
+        
+                 <p>Metode aquaponik, yang menggabungkan budidaya tanaman dan pembiakan ikan dalam satu ekosistem tertutup, juga merupakan pilihan menarik. Ikan yang dibudidayakan akan menghasilkan limbah yang mengandung nutrisi, yang kemudian digunakan untuk menyuburkan tanaman. Sebaliknya, tanaman membantu menyaring air untuk ikan, menciptakan lingkungan yang saling menguntungkan bagi keduanya.</p>
+        
+                <p>Pemilihan tanaman yang tepat juga sangat penting dalam budidaya lahan terbatas. Beberapa jenis sayuran yang cocok ditanam dalam wadah terbatas antara lain selada, bayam, sawi, kangkung, dan tomat. Tanaman-tanaman ini memiliki siklus pertumbuhan yang cepat dan tidak memerlukan banyak ruang untuk berkembang.</p>
+        
+                 <p>Keuntungan utama dari budidaya tanaman sayuran di lahan terbatas adalah penghematan biaya transportasi dan ketahanan pangan yang lebih baik, karena hasil pertanian bisa langsung dinikmati oleh keluarga atau komunitas di sekitar. Selain itu, kegiatan ini juga dapat menjadi sumber pendapatan tambahan jika dilakukan dalam skala yang lebih besar, seperti menjual hasil panen ke pasar lokal.</p>
+
+                <p>Dengan dukungan teknologi pertanian yang semakin maju, seperti aplikasi monitoring tanaman dan sistem irigasi pintar, budidaya sayuran di lahan terbatas menjadi lebih mudah dan efisien. Tidak hanya itu, banyak komunitas urban yang kini aktif mengembangkan pertanian kota sebagai bagian dari gaya hidup sehat dan berkelanjutan.</p>
+        
+                <p>Jadi, bagi Anda yang memiliki lahan terbatas, jangan ragu untuk mencoba teknik-teknik ini. Selain membantu memenuhi kebutuhan pangan, Anda juga dapat berkontribusi dalam menciptakan lingkungan yang lebih hijau dan lestari di sekitar Anda.</p>
+                 `,
+                author: "Admin Teman Petani",
+                date: "05 November 2024"
+            },
+
+            {
+                id: 3,
+                subtitle: "Pertanian",
+                category: "POPULAR",
+                img: "https://lampost.co/wp-content/uploads/2024/08/padi.jpg",
+                title: "Pentingnya Pemilihan Varietas Padi yang Sesuai dengan Kondisi Lahan",
+                content: `
+              <p>Pemilihan varietas padi yang tepat sesuai dengan kondisi lahan sangat penting dalam memastikan hasil panen yang optimal. Setiap jenis lahan memiliki karakteristik yang berbeda, seperti tingkat kelembapan, tekstur tanah, dan ketahanan terhadap hama. Oleh karena itu, pemilihan varietas padi yang tepat dapat membantu meningkatkan produktivitas tanaman padi dan mengurangi kerugian akibat kondisi lahan yang tidak cocok.</p>
+        
+        <p>Di Indonesia, terdapat berbagai jenis varietas padi yang cocok untuk berbagai kondisi lahan. Untuk lahan yang memiliki kondisi tanah kering atau lahan tegalan, varietas padi yang tahan terhadap kekeringan menjadi pilihan utama. Varietas padi seperti Inpara dan Ciherang, yang dikenal memiliki daya tahan terhadap kekeringan, sangat cocok ditanam di lahan kering atau lahan dengan sistem irigasi yang terbatas.</p>
+        
+        <p>Sementara itu, untuk lahan yang memiliki kondisi tanah basah atau rawa, seperti di daerah pesisir atau delta sungai, varietas padi yang toleran terhadap genangan air seperti varietas padi lahan sawah seperti IR64, Padi C4, dan Gogo Rancah sangat cocok. Varietas-varietas ini memiliki kemampuan untuk bertahan hidup meskipun akar padi terendam air dalam waktu yang lama.</p>
+        
+        <p>Selain itu, penting juga untuk memperhatikan waktu tanam dan faktor iklim saat memilih varietas padi. Beberapa varietas padi lebih cocok ditanam pada musim hujan, sedangkan varietas lain lebih cocok untuk musim kemarau. Misalnya, varietas padi IR 64 memiliki waktu pematangan yang lebih cepat dan lebih cocok untuk ditanam pada musim kemarau, sementara varietas seperti Padi Gogo Rancah lebih cocok untuk musim hujan yang lebih lembap.</p>
+        
+        <p>Dalam pemilihan varietas padi, petani juga harus memperhatikan faktor ketahanan terhadap hama dan penyakit. Beberapa varietas padi memiliki ketahanan alami terhadap serangan hama seperti penggerek batang atau penyakit busuk daun. Dengan memilih varietas yang tahan terhadap serangan hama, petani dapat mengurangi penggunaan pestisida, yang tentunya lebih ramah lingkungan dan lebih ekonomis.</p>
+        
+        <p>Selain ketahanan terhadap hama, ketahanan terhadap penyakit seperti blast (blast rice) dan tungro juga perlu dipertimbangkan. Varietas padi yang lebih tahan terhadap penyakit akan mengurangi risiko kegagalan panen dan meningkatkan keuntungan petani.</p>
+        
+        <p>Pemilihan varietas padi yang tepat juga akan mempengaruhi hasil panen dan kualitas beras yang dihasilkan. Beras yang dihasilkan dari varietas padi yang tepat akan memiliki kualitas yang lebih baik, dengan rasa yang lebih enak dan tekstur yang lebih baik. Hal ini sangat penting, terutama di pasar lokal dan internasional yang semakin memperhatikan kualitas produk pertanian.</p>
+        
+        <p>Dalam mengoptimalkan pemilihan varietas padi, petani dapat berkonsultasi dengan penyuluh pertanian atau mengikuti program penelitian yang dilakukan oleh institusi pertanian untuk mendapatkan informasi terbaru tentang varietas padi yang sesuai dengan kondisi lahan dan iklim di daerah mereka. Dengan pendekatan yang tepat, pemilihan varietas padi yang sesuai dapat membantu mencapai hasil panen yang lebih baik dan berkelanjutan.</p>
+    `,
+                author: "Admin Teman Petani",
+                date: "04 November 2024"
+            },
+            {
+                id: 4,
+                subtitle: "Pertanian",
+                category: "NEWEST",
+                img: "../assets/images/petani-oki.jpeg",
+                title: "Pupuk Organik vs. Pupuk Kimia, Mana yang Lebih Baik untuk Padi?",
+                content: `
+        <p>Pupuk adalah salah satu faktor kunci yang mempengaruhi keberhasilan pertanian, terutama dalam budidaya padi. Di Indonesia, ada dua jenis pupuk utama yang sering digunakan oleh petani, yaitu pupuk organik dan pupuk kimia. Meskipun keduanya memiliki peran penting dalam meningkatkan hasil pertanian, pemilihan antara pupuk organik dan pupuk kimia masih menjadi perdebatan yang tidak pernah usai. Lalu, mana yang lebih baik untuk padi?</p>
+        
+        <h2>Pupuk Organik</h2>
+        <p>Pupuk organik adalah pupuk yang terbuat dari bahan-bahan alami, seperti kompos, pupuk kandang, limbah pertanian, dan sisa-sisa tanaman. Pupuk ini memiliki banyak manfaat, di antaranya:</p>
+        <ul>
+            <li><strong>Meningkatkan Kesuburan Tanah:</strong> Pupuk organik dapat memperbaiki struktur tanah dan meningkatkan kandungan bahan organik dalam tanah. Ini penting untuk menjaga kelembaban tanah dan mengurangi erosi.</li>
+            <li><strong>Meningkatkan Aktivitas Mikroorganisme Tanah:</strong> Pupuk organik mengandung mikroorganisme yang membantu dalam proses dekomposisi bahan organik, yang akhirnya meningkatkan kualitas tanah.</li>
+            <li><strong>Ramah Lingkungan:</strong> Karena terbuat dari bahan alami, pupuk organik lebih ramah lingkungan dan tidak menyebabkan polusi pada tanah atau sumber daya air.</li>
+        </ul>
+        
+        <p>Namun, kekurangan pupuk organik adalah:</p>
+        <ul>
+            <li><strong>Proses Pengaplikasian Lebih Lama:</strong> Pupuk organik cenderung bekerja lebih lambat dibandingkan pupuk kimia, sehingga hasilnya tidak bisa langsung terlihat dalam waktu singkat.</li>
+            <li><strong>Penggunaan yang Lebih Banyak:</strong> Dibutuhkan lebih banyak pupuk organik untuk memberikan nutrisi yang cukup bagi tanaman, yang dapat meningkatkan biaya produksi.</li>
+        </ul>
+
+        <h2>Pupuk Kimia</h2>
+        <p>Pupuk kimia, atau pupuk anorganik, adalah pupuk yang mengandung unsur-unsur hara yang dibutuhkan tanaman, seperti nitrogen (N), fosfor (P), dan kalium (K). Pupuk ini bekerja cepat dan memiliki beberapa keuntungan, antara lain:</p>
+        <ul>
+            <li><strong>Hasil Cepat:</strong> Pupuk kimia dapat memberikan hasil yang lebih cepat dalam meningkatkan pertumbuhan tanaman karena nutrisi yang terkandung di dalamnya mudah diserap oleh tanaman.</li>
+            <li><strong>Aplikasi yang Mudah:</strong> Pupuk kimia lebih mudah diterapkan dan tidak memerlukan proses pengolahan seperti pupuk organik.</li>
+            <li><strong>Efisien dalam Penggunaan:</strong> Pupuk kimia dapat memberikan efek yang lebih besar meskipun dalam jumlah yang lebih kecil dibandingkan dengan pupuk organik.</li>
+        </ul>
+
+        <p>Namun, pupuk kimia juga memiliki beberapa kelemahan yang perlu diperhatikan:</p>
+        <ul>
+            <li><strong>Kerusakan pada Tanah:</strong> Penggunaan pupuk kimia dalam jangka panjang dapat menyebabkan penurunan kualitas tanah dan mengurangi keanekaragaman hayati tanah.</li>
+            <li><strong>Risiko Polusi:</strong> Penggunaan pupuk kimia yang berlebihan dapat menyebabkan pencemaran air dan tanah yang dapat merusak ekosistem dan kesehatan manusia.</li>
+            <li><strong>Kebutuhan Pupuk yang Terus-Menerus:</strong> Tanah yang terlalu banyak diberi pupuk kimia bisa kehilangan daya dukungnya, sehingga petani harus terus-menerus membeli pupuk kimia.</li>
+        </ul>
+
+        <h2>Perbandingan Pupuk Organik dan Pupuk Kimia untuk Padi</h2>
+        <p>Kedua jenis pupuk ini memiliki kelebihan dan kekurangan masing-masing. Oleh karena itu, pemilihan antara pupuk organik dan kimia sangat tergantung pada tujuan dan kondisi pertanian masing-masing. Jika tujuan utama adalah meningkatkan kesuburan tanah dalam jangka panjang dan menjaga keseimbangan ekosistem, pupuk organik menjadi pilihan yang lebih baik. Sebaliknya, jika petani menginginkan hasil yang cepat dan efisien dalam waktu singkat, pupuk kimia dapat menjadi solusi yang lebih tepat.</p>
+        
+        <p>Namun, banyak petani yang mengadopsi pendekatan campuran, yaitu dengan mengkombinasikan pupuk organik dan kimia. Dengan cara ini, mereka dapat memanfaatkan manfaat keduanya, yaitu mempertahankan kesuburan tanah dengan pupuk organik, sementara mendapatkan hasil cepat dengan pupuk kimia. Pendekatan ini memungkinkan petani untuk mencapai hasil yang optimal, tanpa merusak kualitas tanah dalam jangka panjang.</p>
+        
+        <h2>Kesimpulan</h2>
+        <p>Secara umum, baik pupuk organik maupun pupuk kimia memiliki kelebihan dan kekurangan. Pemilihan jenis pupuk yang digunakan harus mempertimbangkan faktor-faktor seperti kondisi tanah, kebutuhan tanaman, dan tujuan jangka panjang. Untuk keberlanjutan pertanian, disarankan agar petani dapat menggunakan pupuk organik sebagai dasar dan pupuk kimia sebagai tambahan, dengan tetap memperhatikan dosis dan waktu aplikasi yang tepat.</p>
+    `,
+                author: "Admin Teman Petani",
+                date: "07 November 2024",
+                href: "../detail/detail.html?articlesId=4"
+            },
+
+
+            {
+                id: 5,
+                subtitle: "Pertanian",
+                category: "NEWEST",
+                img: "../assets/images/images.jpg",
+                title: "Solusi Meningkatkan Produksi Padi",
+                content: `
+        <p>Produksi padi merupakan salah satu aspek penting dalam ketahanan pangan di Indonesia. Sebagai negara dengan jumlah konsumsi beras yang sangat tinggi, peningkatan produksi padi menjadi hal yang sangat krusial untuk menjaga ketersediaan pangan. Namun, meskipun Indonesia memiliki potensi pertanian yang besar, masih banyak tantangan yang dihadapi oleh petani dalam meningkatkan hasil produksi padi. Dalam artikel ini, kita akan membahas berbagai solusi yang dapat diterapkan untuk meningkatkan produksi padi secara efektif.</p>
+
+        <h2>1. Penggunaan Varietas Padi Unggul</h2>
+        <p>Pemilihan varietas padi yang tepat adalah langkah pertama untuk meningkatkan hasil produksi. Varietas padi unggul, yang telah terbukti memiliki ketahanan terhadap hama dan penyakit serta mampu beradaptasi dengan berbagai kondisi iklim, dapat memberikan hasil yang lebih baik. Beberapa varietas padi unggul yang sering digunakan di Indonesia, seperti IR 64 dan Ciherang, sudah terbukti menghasilkan padi dengan kualitas tinggi dalam jumlah yang lebih banyak.</p>
+
+        <h2>2. Teknik Budidaya yang Efisien</h2>
+        <p>Teknik budidaya padi yang efisien dapat meningkatkan hasil panen dengan memanfaatkan sumber daya yang ada secara optimal. Salah satu teknik yang dapat diterapkan adalah sistem tanam jajar legowo, yaitu penanaman padi dengan jarak tanam tertentu untuk meningkatkan penyerapan air dan sinar matahari. Selain itu, penggunaan sistem pertanian terpadu, seperti pengelolaan air yang baik dan penanaman bersama dengan tanaman pendamping, juga dapat meningkatkan hasil produksi padi.</p>
+
+        <h2>3. Pengelolaan Tanah yang Baik</h2>
+        <p>Tanah yang subur dan terkelola dengan baik merupakan kunci keberhasilan dalam budidaya padi. Oleh karena itu, penting untuk melakukan pengolahan tanah yang tepat sebelum menanam padi. Penggunaan pupuk organik dan kimia secara seimbang dapat meningkatkan kualitas tanah, sementara pengolahan tanah yang baik akan meningkatkan kemampuan tanah dalam menyerap air dan unsur hara yang dibutuhkan tanaman.</p>
+
+        <h2>4. Pengendalian Hama dan Penyakit</h2>
+        <p>Hama dan penyakit merupakan faktor penghambat utama dalam produksi padi. Untuk itu, pengendalian hama dan penyakit harus dilakukan dengan cermat dan terencana. Penggunaan pestisida secara bijak dan tepat waktu sangat penting untuk menghindari kerugian yang disebabkan oleh serangan hama. Selain itu, pemanfaatan metode pengendalian hayati, seperti penggunaan predator alami atau mikroorganisme pengendali, dapat menjadi alternatif yang ramah lingkungan.</p>
+
+        <h2>5. Pemanfaatan Teknologi Pertanian</h2>
+        <p>Teknologi pertanian yang semakin berkembang memberikan banyak peluang untuk meningkatkan hasil produksi padi. Beberapa teknologi yang dapat diterapkan oleh petani antara lain penggunaan sistem irigasi modern, pemanfaatan drone untuk pemantauan tanaman, serta penggunaan aplikasi pertanian berbasis data untuk memantau kondisi tanaman dan tanah secara real-time. Dengan memanfaatkan teknologi ini, petani dapat memperoleh data yang akurat untuk pengambilan keputusan yang lebih tepat dalam meningkatkan produksi padi.</p>
+
+        <h2>6. Pelatihan dan Pendidikan untuk Petani</h2>
+        <p>Salah satu tantangan terbesar dalam meningkatkan produksi padi adalah kurangnya pengetahuan dan keterampilan yang dimiliki oleh sebagian besar petani. Oleh karena itu, pelatihan dan pendidikan untuk petani sangat penting untuk meningkatkan kemampuan mereka dalam mengelola usaha tani secara efektif. Pemerintah dan lembaga swasta dapat bekerja sama dalam menyediakan pelatihan teknis, serta memperkenalkan teknologi baru yang dapat meningkatkan hasil pertanian.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Meningkatkan produksi padi membutuhkan pendekatan yang holistik, mulai dari pemilihan varietas padi unggul, teknik budidaya yang efisien, hingga penggunaan teknologi pertanian yang canggih. Dengan mengimplementasikan solusi-solusi di atas secara terintegrasi, kita dapat meningkatkan hasil produksi padi yang tidak hanya berkualitas tinggi, tetapi juga berkelanjutan. Dukungan dari pemerintah, lembaga penelitian, serta petani itu sendiri akan sangat menentukan keberhasilan dalam mewujudkan peningkatan produksi padi di Indonesia.</p>
+    `,
+                author: "Admin Teman Petani",
+                date: "08 November 2024",
+                href: "../detail/detail.html?articlesId=5"
+            },
+
+            {
+                id: 6,
+                subtitle: "Pertanian",
+                category: "NEWEST",
+                img: "/assets/images/antarafoto-target-produksi-beras-2024-301223-yn-1_ratio-16x9.jpg",
+                title: "Dampak Perubahan Iklim terhadap Produksi Padi di Indonesia",
+                content: `
+        <p>Perubahan iklim telah menjadi isu global yang memengaruhi berbagai sektor kehidupan, termasuk sektor pertanian. Di Indonesia, yang merupakan salah satu negara penghasil padi terbesar di dunia, dampak perubahan iklim sangat dirasakan. Perubahan pola curah hujan, suhu ekstrem, dan pergeseran musim dapat berdampak signifikan terhadap produksi padi. Artikel ini akan membahas dampak perubahan iklim terhadap produksi padi di Indonesia dan langkah-langkah mitigasi yang dapat dilakukan untuk mengurangi dampaknya.</p>
+
+        <h2>1. Perubahan Pola Curah Hujan</h2>
+        <p>Perubahan curah hujan yang tidak menentu merupakan salah satu dampak utama perubahan iklim yang mempengaruhi produksi padi. Di beberapa daerah, curah hujan yang berlebihan dapat menyebabkan banjir yang merusak tanaman padi, sementara di daerah lain, kekeringan yang berkepanjangan menghambat pertumbuhan padi. Ketergantungan padi pada pola curah hujan yang stabil menjadikannya rentan terhadap perubahan iklim, terutama dalam mengatur irigasi yang efektif.</p>
+
+        <h2>2. Suhu Ekstrem yang Mempengaruhi Pertumbuhan Tanaman</h2>
+        <p>Perubahan suhu yang ekstrem, baik peningkatan suhu yang terlalu tinggi maupun penurunan suhu yang terlalu rendah, dapat berdampak pada kualitas dan kuantitas produksi padi. Suhu yang terlalu panas dapat menyebabkan bunga padi gagal berkembang dan mengurangi hasil panen, sementara suhu yang terlalu rendah dapat menghambat proses fotosintesis dan pertumbuhan tanaman padi. Kenaikan suhu juga berpotensi meningkatkan serangan hama dan penyakit yang dapat merusak tanaman padi.</p>
+
+        <h2>3. Pergeseran Musim Tanam</h2>
+        <p>Perubahan iklim juga menyebabkan pergeseran musim tanam yang sebelumnya terjadwal dengan baik. Di beberapa daerah, musim tanam yang biasanya dimulai pada bulan tertentu kini menjadi lebih tidak terprediksi, mempengaruhi waktu tanam dan hasil panen. Petani harus menyesuaikan diri dengan perubahan ini untuk memastikan tanaman tetap tumbuh optimal, meskipun kondisi cuaca berubah.</p>
+
+        <h2>4. Dampak pada Ketersediaan Sumber Daya Air</h2>
+        <p>Ketersediaan air yang cukup untuk irigasi menjadi sangat penting dalam produksi padi. Perubahan iklim dapat menyebabkan sumber daya air menjadi terbatas, baik akibat kekeringan maupun pergeseran pola aliran sungai. Wilayah-wilayah yang bergantung pada sistem irigasi alami atau sungai besar bisa mengalami kesulitan dalam memperoleh pasokan air yang memadai, yang tentu saja akan mempengaruhi hasil produksi padi.</p>
+
+        <h2>5. Adaptasi Terhadap Perubahan Iklim</h2>
+        <p>Untuk mengatasi dampak perubahan iklim, petani padi harus melakukan berbagai adaptasi. Salah satu cara adalah dengan mengembangkan varietas padi yang lebih tahan terhadap kondisi ekstrem, seperti varietas yang lebih tahan terhadap kekeringan atau tahan terhadap genangan air. Selain itu, teknologi pertanian seperti sistem irigasi yang efisien dan pemantauan cuaca yang lebih baik juga dapat membantu petani untuk menyesuaikan kegiatan mereka dengan perubahan iklim yang terjadi.</p>
+
+        <h2>6. Kebijakan Pemerintah untuk Mengurangi Dampak Perubahan Iklim</h2>
+        <p>Pemerintah Indonesia juga memiliki peran penting dalam mengurangi dampak perubahan iklim terhadap pertanian. Kebijakan yang mendukung pengembangan teknologi pertanian yang ramah lingkungan, pelatihan bagi petani untuk menerapkan teknik adaptasi perubahan iklim, dan pembenahan sistem irigasi yang lebih baik menjadi langkah-langkah yang perlu diambil. Selain itu, perlu adanya upaya konservasi lingkungan dan pengelolaan sumber daya alam secara berkelanjutan untuk memastikan ketahanan pangan di masa depan.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Dampak perubahan iklim terhadap produksi padi di Indonesia sangat nyata dan harus segera ditangani dengan serius. Menghadapi perubahan iklim yang semakin ekstrem, petani, masyarakat, dan pemerintah harus bekerja sama untuk mencari solusi yang dapat mengurangi dampak buruknya. Dengan mengadopsi teknologi pertanian yang lebih ramah lingkungan, memperbaiki sistem irigasi, serta mengembangkan varietas padi yang lebih tahan terhadap perubahan iklim, kita dapat meningkatkan ketahanan pangan dan memastikan bahwa produksi padi tetap terjaga dengan baik.</p>
+    `,
+                author: "Admin Teman Petani",
+                date: "09 November 2024",
+                href: "../detail/detail.html?articlesId=6"
+            },
+
+            {
+                id: 7,
+                subtitle: "Pertanian",
+                category: "POPULAR",
+                img: "/assets/images/20191218084856-apa-saja-kandungan-dalam-sayur-dan-buah-untuk-kesehatan-tubuh-66.jpg",
+                title: "Sayuran sebagai Sumber Vitamin dan Mineral",
+                content: `
+        <p>Sayuran telah lama dikenal sebagai makanan yang sangat bergizi dan menjadi bagian penting dalam pola makan sehat. Tidak hanya kaya akan serat, sayuran juga mengandung berbagai vitamin dan mineral yang diperlukan tubuh untuk menjaga kesehatan. Dalam artikel ini, kita akan membahas berbagai jenis vitamin dan mineral yang terdapat dalam sayuran, serta manfaatnya bagi tubuh manusia.</p>
+
+        <h2>1. Vitamin A untuk Kesehatan Mata</h2>
+        <p>Vitamin A adalah salah satu vitamin penting yang terdapat dalam banyak sayuran, terutama sayuran berwarna hijau gelap dan oranye. Misalnya, wortel, bayam, dan kale mengandung beta-karoten, yang diubah menjadi vitamin A dalam tubuh. Vitamin A berperan penting dalam menjaga kesehatan mata, mencegah kebutaan malam, dan mendukung sistem kekebalan tubuh.</p>
+
+        <h2>2. Vitamin C untuk Meningkatkan Kekebalan Tubuh</h2>
+        <p>Vitamin C sangat penting dalam meningkatkan sistem kekebalan tubuh dan mencegah berbagai penyakit. Sayuran seperti paprika merah, brokoli, dan kubis mengandung vitamin C dalam jumlah yang tinggi. Selain itu, vitamin C juga berfungsi sebagai antioksidan yang melawan radikal bebas dalam tubuh, menjaga kesehatan kulit, dan mendukung penyembuhan luka.</p>
+
+        <h2>3. Vitamin K untuk Kesehatan Tulang</h2>
+        <p>Vitamin K adalah nutrisi penting yang berperan dalam pembekuan darah dan kesehatan tulang. Sayuran berdaun hijau gelap seperti bayam, kangkung, dan sawi kaya akan vitamin K. Nutrisi ini membantu tubuh dalam proses penyerapan kalsium yang penting untuk menjaga kekuatan tulang dan mencegah osteoporosis.</p>
+
+        <h2>4. Folat untuk Kesehatan Reproduksi dan DNA</h2>
+        <p>Folat, atau vitamin B9, adalah vitamin yang sangat penting bagi ibu hamil dan perkembangan janin. Sayuran hijau seperti brokoli, kacang polong, dan selada kaya akan folat. Folat berperan dalam pembentukan sel darah merah dan membantu mencegah cacat lahir pada bayi, serta mendukung kesehatan DNA dalam tubuh.</p>
+
+        <h2>5. Mineral: Zat Besi untuk Pembentukan Sel Darah Merah</h2>
+        <p>Zat besi adalah mineral yang sangat penting untuk pembentukan hemoglobin dalam darah, yang membantu membawa oksigen ke seluruh tubuh. Sayuran seperti bayam, kangkung, dan brokoli mengandung zat besi yang dapat membantu mencegah anemia dan menjaga kesehatan darah. Untuk meningkatkan penyerapan zat besi dari sayuran, disarankan untuk mengonsumsinya bersama makanan yang kaya akan vitamin C.</p>
+
+        <h2>6. Kalsium untuk Kesehatan Tulang dan Gigi</h2>
+        <p>Kalsium adalah mineral yang sangat penting untuk kesehatan tulang dan gigi. Sayuran hijau seperti sawi, kale, dan bok choy mengandung kalsium dalam jumlah yang cukup tinggi. Mengonsumsi sayuran kaya kalsium membantu menjaga kepadatan tulang, mencegah pengeroposan tulang, dan mendukung kesehatan gigi.</p>
+
+        <h2>7. Magnesium untuk Fungsi Otot dan Saraf</h2>
+        <p>Magnesium adalah mineral yang terlibat dalam lebih dari 300 reaksi biokimia dalam tubuh, termasuk fungsi otot dan saraf, serta metabolisme energi. Sayuran hijau seperti bayam, kale, dan selada mengandung magnesium yang membantu menjaga keseimbangan elektrolit dan mencegah kram otot serta gangguan saraf.</p>
+
+        <h2>8. Serat untuk Pencernaan yang Sehat</h2>
+        <p>Selain kaya akan vitamin dan mineral, sayuran juga merupakan sumber serat yang sangat baik. Serat berperan penting dalam memperlancar pencernaan dan mencegah sembelit. Sayuran seperti wortel, kubis, dan brokoli mengandung serat yang dapat mendukung sistem pencernaan yang sehat dan mencegah masalah pencernaan seperti sembelit dan gangguan usus.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Sayuran adalah bagian penting dalam pola makan sehat karena kaya akan vitamin, mineral, dan serat. Mengonsumsi berbagai jenis sayuran setiap hari dapat memberikan manfaat luar biasa untuk kesehatan tubuh, mulai dari menjaga kesehatan mata, kulit, dan tulang hingga meningkatkan sistem kekebalan tubuh dan pencernaan. Oleh karena itu, pastikan untuk memasukkan berbagai jenis sayuran dalam menu makanan Anda setiap hari untuk menjaga tubuh tetap sehat dan bugar.</p>
+    `,
+                author: "Admin Teman Petani",
+                date: "07 November 2024",
+                href: "../detail/detail.html?articlesId=7"
+            },
+
+
+            {
+                id: 8,
+                subtitle: "Pertanian",
+                category: "POPULAR",
+                img: "/assets/images/images (1).jpg",
+                title: "Sayuran sebagai Bahan Baku Industri Pengolahan Makanan",
+                content: `
+        <p>Sayuran tidak hanya bermanfaat sebagai bahan makanan segar, tetapi juga memiliki potensi besar sebagai bahan baku dalam industri pengolahan makanan. Dengan proses yang tepat, sayuran dapat diolah menjadi produk makanan yang bernilai tambah, seperti sayuran kaleng, jus sayuran, keripik, dan makanan olahan lainnya. Artikel ini akan membahas bagaimana sayuran digunakan dalam industri pengolahan makanan dan manfaat yang dihasilkan dari proses pengolahan tersebut.</p>
+
+        <h2>1. Sayuran Kalengan</h2>
+        <p>Industri pengolahan makanan pertama yang paling umum menggunakan sayuran adalah industri pengalengan. Sayuran seperti jagung, kacang hijau, tomat, dan wortel sering kali diproses menjadi produk kalengan yang memiliki daya simpan yang lebih lama. Pengalengan sayuran tidak hanya membuatnya lebih praktis, tetapi juga memungkinkan konsumen untuk menikmati sayuran sepanjang tahun, meskipun bukan musim panen. Selain itu, pengalengan sayuran juga mempertahankan sebagian besar kandungan gizi, meskipun ada beberapa kehilangan nutrisi yang terjadi selama proses pengolahan.</p>
+
+        <h2>2. Jus Sayuran</h2>
+        <p>Jus sayuran kini menjadi pilihan populer bagi banyak konsumen yang ingin mengonsumsi lebih banyak sayuran dalam bentuk cair. Sayuran seperti wortel, tomat, seledri, dan bayam sering digunakan untuk membuat jus sayuran yang kaya akan vitamin dan mineral. Proses pembuatan jus sayuran ini tidak hanya menjadikan sayuran lebih mudah dikonsumsi, tetapi juga memberikan manfaat kesehatan, seperti meningkatkan daya tahan tubuh, memperbaiki pencernaan, dan mengurangi peradangan. Dalam industri, jus sayuran dapat dikemas dalam bentuk botol atau kaleng dan memiliki masa simpan yang cukup lama jika dipasteurisasi dengan benar.</p>
+
+        <h2>3. Keripik Sayuran</h2>
+        <p>Keripik sayuran adalah salah satu inovasi populer dalam industri pengolahan makanan yang menggunakan sayuran sebagai bahan baku utama. Sayuran seperti kale, wortel, ubi jalar, dan bayam diolah menjadi keripik dengan cara dipanggang atau digoreng. Produk ini menawarkan alternatif yang lebih sehat daripada keripik kentang biasa, karena lebih rendah kalori dan lebih kaya akan serat dan mikronutrien. Keripik sayuran juga sering dipasarkan sebagai camilan sehat yang bisa dinikmati tanpa rasa bersalah.</p>
+
+        <h2>4. Tepung Sayuran</h2>
+        <p>Beberapa jenis sayuran, seperti ubi jalar, jagung, dan kacang polong, dapat diolah menjadi tepung sayuran yang digunakan dalam berbagai produk makanan olahan. Tepung sayuran dapat digunakan untuk membuat roti, pasta, dan makanan ringan lainnya. Tepung ini memiliki kandungan gizi yang lebih tinggi dibandingkan tepung terigu biasa, karena kaya akan serat, vitamin, dan mineral. Tepung sayuran juga dapat digunakan sebagai alternatif bagi mereka yang memiliki alergi gluten atau intoleransi terhadap gandum.</p>
+
+        <h2>5. Sayuran untuk Bahan Tambahan Makanan</h2>
+        <p>Selain dijadikan produk olahan utama, sayuran juga digunakan dalam industri pengolahan makanan sebagai bahan tambahan atau bumbu. Misalnya, daun bawang, daun seledri, dan daun kemangi sering digunakan dalam pembuatan saus, sup, dan bumbu makanan lainnya. Sayuran ini memberikan rasa segar dan meningkatkan kualitas produk makanan. Selain itu, ekstrak sayuran juga digunakan dalam pembuatan kaldu sayuran, pasta, dan bumbu instan yang populer di pasar.</p>
+
+        <h2>6. Makanan Siap Saji</h2>
+        <p>Industri makanan siap saji juga memanfaatkan sayuran sebagai bahan baku utama. Misalnya, sayuran seperti brokoli, wortel, kacang hijau, dan jagung sering digunakan dalam produk makanan siap saji seperti sup beku, lasagna, dan makanan olahan lainnya. Proses pengolahan sayuran dalam makanan siap saji memungkinkan konsumen untuk menikmati hidangan sehat dan bergizi dengan mudah dan cepat.</p>
+
+        <h2>7. Manfaat Pengolahan Sayuran dalam Industri Makanan</h2>
+        <p>Proses pengolahan sayuran dalam industri makanan tidak hanya memberikan kemudahan bagi konsumen, tetapi juga memungkinkan sayuran untuk dinikmati di luar musim atau oleh konsumen yang sulit mengakses produk segar. Selain itu, pengolahan sayuran juga membantu memperpanjang masa simpan produk dan menjaga kualitas gizi sayuran. Pengolahan sayuran menjadi produk makanan juga memberikan nilai ekonomi yang lebih tinggi bagi petani dan produsen makanan.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Sayuran memiliki peran penting dalam industri pengolahan makanan, tidak hanya sebagai bahan makanan segar tetapi juga sebagai bahan baku untuk produk olahan yang bernilai tambah. Pengolahan sayuran menjadi berbagai produk seperti sayuran kalengan, jus sayuran, keripik, tepung, dan bahan tambahan makanan memungkinkan konsumen untuk menikmati manfaat gizi sayuran sepanjang tahun. Industri pengolahan makanan berbasis sayuran juga memberikan peluang ekonomi yang besar bagi sektor pertanian dan produsen makanan.</p>
+    `,
+                author: "Admin Teman Petani",
+                date: "08 November 2024",
+                href: "../detail/detail.html?articlesId=8"
+            },
+
+            {
+                id: 9,
+                subtitle: "Pertanian",
+                category: "NEWEST",
+                img: "/assets/images/images (2).jpg",
+                title: "Buah-buahan yang Baik untuk Diet",
+                content: `
+        <p>Diet sehat sering kali melibatkan konsumsi buah-buahan yang kaya akan vitamin, mineral, serat, dan antioksidan. Buah-buahan ini tidak hanya membantu menurunkan berat badan tetapi juga menjaga kesehatan tubuh secara keseluruhan. Artikel ini akan membahas berbagai jenis buah-buahan yang baik untuk diet dan manfaatnya bagi kesehatan.</p>
+
+        <h2>1. Apel</h2>
+        <p>Apel adalah salah satu buah yang populer dan kaya akan serat. Serat yang terkandung dalam apel membantu meningkatkan rasa kenyang, mengurangi nafsu makan, dan mendukung pencernaan. Selain itu, apel juga mengandung vitamin C yang dapat meningkatkan sistem kekebalan tubuh. Apel memiliki kandungan kalori rendah dan dapat menjadi camilan sehat saat diet.</p>
+
+        <h2>2. Pisang</h2>
+        <p>Pisang mengandung kalium yang tinggi dan dapat membantu menjaga keseimbangan elektrolit tubuh. Walaupun pisang lebih tinggi kalori dibandingkan dengan beberapa buah lainnya, pisang tetap merupakan pilihan yang baik untuk diet karena kandungan seratnya yang tinggi. Pisang juga dapat memberikan energi yang cukup untuk tubuh, cocok untuk dimakan sebagai camilan setelah berolahraga.</p>
+
+        <h2>3. Jeruk</h2>
+        <p>Jeruk kaya akan vitamin C dan serat. Vitamin C dalam jeruk membantu mempercepat metabolisme tubuh, sementara serat membantu memperlancar pencernaan. Jeruk juga memiliki kandungan air yang tinggi, yang membantu menjaga hidrasi tubuh. Mengonsumsi jeruk atau jus jeruk segar dapat menjadi pilihan yang baik dalam diet sehat.</p>
+
+        <h2>4. Stroberi</h2>
+        <p>Stroberi adalah buah rendah kalori yang kaya akan antioksidan, serat, dan vitamin C. Kandungan antioksidan dalam stroberi membantu melawan radikal bebas yang dapat merusak sel-sel tubuh. Stroberi juga memiliki kandungan air yang cukup tinggi, sehingga dapat membantu menjaga tubuh tetap terhidrasi. Buah ini sangat cocok untuk diet, baik dikonsumsi langsung maupun dijadikan bahan tambahan dalam smoothie.</p>
+
+        <h2>5. Alpukat</h2>
+        <p>Alpukat adalah buah yang unik karena kaya akan lemak sehat, terutama asam lemak omega-9. Lemak sehat ini membantu menurunkan kadar kolesterol jahat dalam tubuh dan mendukung kesehatan jantung. Meskipun alpukat memiliki kandungan kalori yang lebih tinggi, lemak sehatnya membantu meningkatkan rasa kenyang dan mengurangi keinginan untuk makan berlebihan. Alpukat dapat dimakan langsung, dijadikan salad, atau diolah menjadi smoothie.</p>
+
+        <h2>6. Pepaya</h2>
+        <p>Pepaya adalah buah tropis yang kaya akan vitamin C, vitamin A, dan enzim papain yang baik untuk pencernaan. Kandungan seratnya juga cukup tinggi, yang membantu melancarkan pencernaan dan meningkatkan rasa kenyang. Pepaya sangat rendah kalori dan dapat membantu detoksifikasi tubuh, membuatnya cocok untuk dimasukkan dalam menu diet.</p>
+
+        <h2>7. Kiwi</h2>
+        <p>Kiwi adalah buah yang mengandung banyak vitamin C, vitamin K, serat, dan antioksidan. Kandungan seratnya membantu menjaga pencernaan yang sehat dan meningkatkan rasa kenyang. Kiwi juga dikenal dapat meningkatkan sistem kekebalan tubuh dan menjaga kesehatan kulit. Buah kiwi yang kaya gizi ini cocok untuk dijadikan camilan sehat selama diet.</p>
+
+        <h2>8. Semangka</h2>
+        <p>Semangka memiliki kandungan air yang sangat tinggi, hampir 92% dari berat buah ini adalah air. Semangka sangat rendah kalori, menjadikannya camilan yang sangat baik untuk diet. Kandungan air dalam semangka tidak hanya membantu menjaga hidrasi tubuh, tetapi juga memberikan efek kenyang yang lebih lama. Semangka juga mengandung lycopene, antioksidan yang baik untuk kesehatan jantung.</p>
+
+        <h2>9. Nanas</h2>
+        <p>Nanas mengandung enzim bromelain yang membantu pencernaan dan dapat mengurangi peradangan dalam tubuh. Selain itu, nanas juga kaya akan vitamin C dan antioksidan, yang membantu memperkuat sistem kekebalan tubuh. Nanas rendah kalori dan memiliki kandungan air yang tinggi, menjadikannya buah yang sangat baik untuk diet.</p>
+
+        <h2>10. Mangga</h2>
+        <p>Mangga adalah sumber vitamin C yang sangat baik dan mengandung banyak serat. Serat dalam mangga membantu melancarkan pencernaan dan meningkatkan rasa kenyang. Selain itu, mangga mengandung antioksidan yang bermanfaat untuk kesehatan kulit dan sistem kekebalan tubuh. Mangga dapat dimakan langsung, dijadikan smoothie, atau ditambahkan dalam salad buah.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Buah-buahan adalah bagian penting dari diet sehat karena kaya akan serat, vitamin, mineral, dan antioksidan. Buah-buahan seperti apel, pisang, jeruk, stroberi, alpukat, pepaya, kiwi, semangka, nanas, dan mangga dapat membantu Anda menurunkan berat badan, menjaga kesehatan pencernaan, meningkatkan metabolisme, serta menjaga tubuh tetap terhidrasi. Menambahkan buah-buahan ini dalam menu diet Anda dapat membantu mencapai tujuan kesehatan dan kebugaran secara alami dan menyenangkan.</p>
+    `,
+                author: "Admin Teman Petani",
+                date: "09 November 2024",
+                href: "../detail/detail.html?articlesId=9"
+            },
+            {
+    id: 10,
+    subtitle: "Pertanian",
+    category: "NEWEST",
+    img: "/assets/images/robotika-64889a9c08a8b555903f78a2.jpg",
+    title: "Teknologi Pertanian Berkelanjutan untuk Masa Depan",
+    content: `
+        <p>Teknologi pertanian berkelanjutan semakin menjadi sorotan utama dalam dunia pertanian. Dengan populasi dunia yang terus berkembang dan perubahan iklim yang memengaruhi produktivitas pertanian, penting untuk mengembangkan metode yang lebih ramah lingkungan dan efisien. Teknologi pertanian berkelanjutan bertujuan untuk mengoptimalkan hasil pertanian tanpa merusak ekosistem dan mengurangi jejak karbon.</p>
+
+        <h2>1. Pertanian Presisi</h2>
+        <p>Pertanian presisi menggunakan teknologi sensor dan data untuk memantau kondisi tanah, cuaca, dan tanaman. Dengan bantuan drone dan satelit, petani dapat mengetahui dengan tepat kapan dan di mana mereka harus menanam, menyiram, atau memberi pupuk. Ini mengurangi pemborosan dan memaksimalkan hasil pertanian.</p>
+
+        <h2>2. Penggunaan Pupuk dan Pestisida yang Terukur</h2>
+        <p>Teknologi pertanian modern memungkinkan penggunaan pupuk dan pestisida yang lebih efisien. Dengan memanfaatkan data analitik, aplikasi pupuk dapat dilakukan secara tepat pada waktu dan tempat yang dibutuhkan, yang mengurangi dampak lingkungan dan meningkatkan keberlanjutan pertanian.</p>
+
+        <h2>3. Pengelolaan Sumber Daya Alam</h2>
+        <p>Dengan teknologi baru, para petani kini dapat mengelola sumber daya alam seperti air dan tanah secara lebih efisien. Teknologi irigasi pintar, misalnya, dapat mengoptimalkan penggunaan air, mengurangi pemborosan, dan memastikan tanaman mendapatkan kelembaban yang tepat untuk tumbuh.</p>
+
+        <h2>4. Genetika Tanaman</h2>
+        <p>Pengembangan varietas tanaman yang lebih tahan terhadap hama dan penyakit serta lebih efisien dalam penggunaan air dan nutrisi menjadi aspek penting dari pertanian berkelanjutan. Penelitian dalam bidang genetika tanaman terus berupaya menciptakan tanaman yang lebih tahan banting dan ramah lingkungan.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Teknologi pertanian berkelanjutan adalah solusi untuk menghadapi tantangan pertanian di masa depan. Dengan mengintegrasikan teknologi canggih dan prinsip keberlanjutan, kita dapat memastikan pertanian tetap produktif tanpa merusak lingkungan. Inovasi dalam pertanian akan memainkan peran penting dalam keberlanjutan pangan global.</p>
+    `,
+    author: "Admin Teman Petani",
+    date: "10 November 2024",
+    href: "../detail/detail.html?articlesId=10"
+},
+{
+    id: 11,
+    subtitle: "Pertanian",
+    category: "NEWEST",
+    img: "/assets/images/pandasarjana.id-30-586x385.png",
+    title: "Inovasi dalam Teknik Irigasi untuk Meningkatkan Hasil Pertanian",
+    content: `
+        <p>Inovasi dalam teknik irigasi telah berkembang pesat dalam beberapa dekade terakhir. Irigasi yang efisien adalah kunci untuk memastikan tanaman mendapatkan jumlah air yang cukup untuk tumbuh tanpa pemborosan. Dengan semakin banyaknya teknologi yang tersedia, petani sekarang memiliki berbagai opsi untuk mengelola kebutuhan air tanaman mereka dengan cara yang lebih ramah lingkungan dan hemat biaya.</p>
+
+        <h2>1. Irigasi Tetes</h2>
+        <p>Teknologi irigasi tetes adalah salah satu metode yang paling efisien untuk mengirimkan air langsung ke akar tanaman. Metode ini mengurangi pemborosan air dan menghindari evaporasi yang terjadi dengan irigasi tradisional. Irigasi tetes juga menghemat energi dan meningkatkan hasil pertanian, karena tanaman menerima air secara langsung dan tepat waktu.</p>
+
+        <h2>2. Irigasi Pintar</h2>
+        <p>Irigasi pintar menggabungkan teknologi sensor untuk memantau kondisi tanah dan kelembaban secara real-time. Dengan menggunakan data ini, sistem irigasi dapat mengatur aliran air secara otomatis, memastikan tanaman menerima kelembaban yang cukup tanpa membuang-buang air. Sistem ini sangat berguna di daerah dengan sumber daya air yang terbatas.</p>
+
+        <h2>3. Penyiraman Menggunakan Teknologi Satelit</h2>
+        <p>Teknologi satelit memungkinkan pemantauan kondisi tanaman dan tanah dari udara. Data satelit dapat digunakan untuk menentukan tingkat kelembaban tanah, sehingga petani dapat memutuskan kapan dan berapa banyak air yang perlu diberikan kepada tanaman. Ini membantu dalam pengelolaan air yang lebih efektif dan mengurangi penggunaan sumber daya alam secara berlebihan.</p>
+
+        <h2>4. Pengolahan Air Hujan</h2>
+        <p>Pengolahan air hujan menjadi sumber irigasi yang berkelanjutan adalah metode yang semakin populer. Teknologi penampungan air hujan memungkinkan petani untuk menyimpan air hujan yang jatuh selama musim hujan dan menggunakannya di musim kemarau. Ini membantu mengurangi ketergantungan pada sumber air tanah dan permukaan yang terbatas.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Inovasi dalam teknik irigasi tidak hanya meningkatkan efisiensi penggunaan air tetapi juga memberikan solusi berkelanjutan bagi petani yang menghadapi perubahan iklim dan kekurangan air. Dengan mengadopsi teknologi irigasi modern, pertanian dapat lebih berkelanjutan dan ramah lingkungan.</p>
+    `,
+    author: "Admin Teman Petani",
+    date: "10 November 2024",
+    href: "../detail/detail.html?articlesId=11"
+},
+{
+    id: 12,
+    subtitle: "Pertanian",
+    category: "NEWEST",
+    img: "/assets/images/images (3).jpg",
+    title: "Menghadapi Tantangan Pertanian di Era Perubahan Iklim",
+    content: `
+        <p>Perubahan iklim menjadi salah satu tantangan terbesar yang dihadapi oleh sektor pertanian saat ini. Perubahan pola cuaca yang drastis, cuaca ekstrem seperti kekeringan dan banjir, serta fluktuasi suhu yang tidak terduga dapat merusak hasil pertanian. Oleh karena itu, petani perlu beradaptasi dengan perubahan ini untuk menjaga keberlanjutan produksi pangan.</p>
+
+        <h2>1. Pengelolaan Sumber Daya Alam yang Bijak</h2>
+        <p>Pengelolaan sumber daya alam yang bijak sangat penting dalam menghadapi perubahan iklim. Ini termasuk mengurangi penggunaan air yang berlebihan, menerapkan teknik pertanian berkelanjutan, dan memanfaatkan teknologi untuk memonitor kondisi tanah dan tanaman. Pengelolaan tanah yang baik dapat meningkatkan ketahanan tanaman terhadap perubahan iklim yang ekstrem.</p>
+
+        <h2>2. Pemilihan Varietas Tanaman yang Tahan Iklim</h2>
+        <p>Memilih varietas tanaman yang tahan terhadap perubahan iklim adalah langkah penting dalam mengurangi dampak buruk perubahan iklim terhadap pertanian. Tanaman yang lebih tahan terhadap suhu ekstrem, kekeringan, atau banjir memiliki peluang lebih baik untuk bertahan hidup dan menghasilkan hasil yang optimal meskipun kondisi iklim tidak menentu.</p>
+
+        <h2>3. Teknologi dan Inovasi untuk Meningkatkan Ketahanan Pertanian</h2>
+        <p>Inovasi dalam teknologi pertanian, seperti penggunaan sensor untuk memantau kelembaban tanah, pemanfaatan irigasi pintar, dan penggunaan drone untuk pemantauan tanaman, dapat membantu petani beradaptasi dengan perubahan iklim. Teknologi-teknologi ini memungkinkan petani untuk mengelola sumber daya lebih efisien dan memperkirakan ancaman cuaca lebih akurat.</p>
+
+        <h2>4. Diversifikasi Tanaman dan Sumber Pendapatan</h2>
+        <p>Petani dapat meningkatkan ketahanan mereka terhadap perubahan iklim dengan melakukan diversifikasi tanaman. Menanam berbagai jenis tanaman dapat mengurangi risiko kegagalan panen karena satu jenis tanaman rentan terhadap cuaca ekstrem. Selain itu, diversifikasi sumber pendapatan, seperti beternak atau berfokus pada tanaman hortikultura, juga dapat membantu petani bertahan di tengah perubahan iklim.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Perubahan iklim adalah tantangan besar bagi dunia pertanian, namun dengan teknologi yang tepat, pemilihan varietas tanaman yang tepat, dan pengelolaan sumber daya alam yang bijaksana, petani dapat beradaptasi dan terus memproduksi pangan yang cukup untuk memenuhi kebutuhan masyarakat. Menanggapi tantangan ini dengan langkah-langkah yang inovatif akan menjadi kunci keberhasilan pertanian di masa depan.</p>
+    `,
+    author: "Admin Teman Petani",
+    date: "10 November 2024",
+    href: "../detail/detail.html?articlesId=12"
+},
+
+
+
+
+
+
+        ];
+
+        // Temukan artikel yang cocok berdasarkan ID
+        const article = articlesData.find(article => article.id === parseInt(articleId));  // Konversi articleId ke integer
+
+        // Menampilkan konten artikel secara dinamis
+        const articleContent = document.getElementById("articleContent");
+        if (article) {
+            articleContent.innerHTML = `
+                <article class="article">
+                    <header class="article-header">
+                        <h1 class="article-title">${article.title}</h1>
+                        <div class="article-meta">
+                            <span class="author">${article.author}</span> | 
+                            <span class="date">${article.date}</span>
+                        </div>
+                        <figure class="article-image">
+                            <img src="${article.img}" alt="${article.title}">
+                        </figure>
+                    </header>
+                    
+                    <section class="article-body">
+                        ${article.content}
+                    </section>
+                </article>
+            `;
+        } else {
+            articleContent.innerHTML = "<p>Artikel tidak ditemukan.</p>";
+        }
+
+        // Menampilkan artikel terkait secara dinamis (4 artikel acak)
+        const relatedArticles = document.getElementById("relatedArticles");
+        const relatedData = articlesData.filter(a => a.id !== parseInt(articleId));
+
+        // Fungsi untuk memilih 4 artikel acak
+        function getRandomArticles(data, num) {
+            const shuffled = data.sort(() => 0.5 - Math.random());  // Mengacak artikel
+            return shuffled.slice(0, num);  // Mengambil 4 artikel pertama setelah diacak
+        }
+
+        const randomArticles = getRandomArticles(relatedData, 4);  // Ambil 4 artikel acak
+
+        // Menampilkan artikel terkait
+        relatedArticles.innerHTML = `
+            ${randomArticles.map(related => `
+                <div class="related-article-item">
+                    <img src="${related.img}" alt="${related.title}" class="related-article-img">
+                    <a href="?articlesId=${related.id}" class="related-article-title">${related.title}</a>
+                </div>
+            `).join('')}
+        `;
+    </script>
+</body>
+
+</html>

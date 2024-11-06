@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TemanPetani</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/articleStyles.css">
+</head>
+<body>
+
+    <!-- Navbar Scroll -->
+    <div class="navbar-scroll" id="navbar-scroll">
+        <div class="navbar-scroll-container">
+            <div class="navbar-left-scroll">
+                TemanPetani
+            </div>
+            <div class="navbar-center-scroll">
+                <a href="../index.html">Beranda</a>
+                <a href="#" class="link-active">Artikel</a>
+                <a href="./calculatorPages.html">Kalkulator</a>
+                <a href="./forumPages.html">Forum</a>
+            </div>
+            <div class="navbar-right-scroll">
+                <a href="../index.html#contactSection">Kontak</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdown-menu">
+        <button class="close-button" id="close-button">&times;</button>
+        <a href="#">Artikel</a>
+        <a href="./calculatorPages.html">Kalkulator</a>
+        <a href="./forumPages.html">Forum</a>
+    </div>
+
+    <section class="header-section">
+        <div class="container">
+            <div class="header-content">
+                <p>Artikel</p>
+                <h1>Panduan <span>Pertanian</span></h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="article" id="articles">
+        <div class="container">
+            <div class="article-right-container">
+                <div class="top-section">
+                    <p class="article-top-title">Artikel Kami</p>
+                    <div class="filter-wrapper">
+                        <button id="allArticles" class="button-filter active">Semua</button>
+                        <button id="popularArticles" class="button-filter">Populer</button>
+                        <button id="newestArticles" class="button-filter">Terbaru</button>
+                    </div>
+                </div>
+                <div class="wrapper-articles" id="wrapperArticles"></div>
+                <button class="show-more" id="showMore">Lebih Banyak</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="plant-section">
+        <div class="container">
+            <div class="top-section">
+                <p class="title">Rekomendasi Tanaman</p>
+                <div class="form-group">
+                    <label for="location">Lokasi</label>
+                    <select id="location" onchange="showRecommendations()">
+                        <option value="">Pilih Lokasi</option>
+                        <option value="Jawa Barat">Jawa Barat</option>
+                        <option value="Sumatera Utara">Sumatera Utara</option>
+                        <option value="Kalimantan Timur">Kalimantan Timur</option>
+                        <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="recommendations" class="recommendations">
+                <div></div>
+                <div class="recom-text"> <img src="../assets/images/searchIcon.png" alt="" width="65px" height="65px"> Anda belum memilih lokasi</div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-container">
+          <div class="footer-content">
+            <p class="website-name">TemanPetani</p>
+            <p class="footer-text">Petani sejahtera, negara sejahtera.</p>
+          </div>
+          <div class="footer-content">
+            <p class="website-name">Tentang</p>
+            <div class="footer-links">
+              <a href="../index.html">
+                <p>Beranda</p>
+              </a>
+              <a href="../index.html#aboutSection">
+                <p>Tentang</p>
+              </a>
+              <a href="../index.html#articleSection">
+                <p>Artikel</p>
+              </a>
+              <a href="../index.html#testimonialSection">
+                <p>Testimoni</p>
+              </a>
+              <a href="../index.html#contactSection">
+                <p>Kontak</p>
+              </a>
+            </div>
+          </div>
+          <div class="footer-content">
+            <p class="website-name">Halaman Detail</p>
+            <div class="footer-links">
+              <a href="../index.html">
+                <p>Beranda</p>
+              </a>
+              <a href="#">
+                <p>Artikel</p>
+              </a>
+              <a href="./calculatorPages.html">
+                <p>Kalkulator</p>
+              </a>
+              <a href="./forumPages.html">
+                <p>Forum</p>
+              </a>
+            </div>
+          </div>
+          <div class="footer-content">
+            <p class="website-name">Kontak</p>
+            <div class="footer-links">
+              <a href="info@temanpetani.com">
+                <p>info@temanpetani.com</p>
+              </a>
+              <p>+52 123 654 7890</p>
+              <p>Jl. Tukad Citarum Gang X. No 23</p>
+            </div>
+          </div>
+        </div>
+        <p
+          class="copyright"
+          style="
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            opacity: 0.8;
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+          "
+        >
+          Copyright © <span>TemanPetani</span> | Developed by
+          <span>Pemuda HTML.</span>
+        </p>
+      </section>
+
+    <script src="./articleScript.js"></script>
+    <script>
+        // JavaScript untuk Menampilkan Rekomendasi Tanaman
+        function showRecommendations() {
+            const location = document.getElementById("location").value;
+            const recommendationsDiv = document.getElementById("recommendations");
+
+            // Menampilkan pesan jika lokasi belum dipilih
+            if (!location) {
+                recommendationsDiv.innerHTML = `
+                    <div></div>
+                    <div class="recom-text"> <img src="../assets/images/searchIcon.png" alt="" width="65px" height="65px"> Anda belum memilih lokasi</div>
+                    <div></div>
+                `;
+                return;
+            }
+
+            // Data tanaman rekomendasi berdasarkan lokasi, lengkap dengan gambar
+            const recommendations = {
+                "Jawa Barat": [
+                    { crop: "Padi", image: "/assets/images/pexels-tomfisk-1554630.jpg" },
+                    { crop: "Jagung", image: "/assets/images/pexels-flambo-388007-1112080.jpg" },
+                    { crop: "Sayuran Hijau", image: "/assets/images/hijau.jpg" }
+                ],
+                "Sumatera Utara": [
+                    { crop: "Kopi", image: "/assets/images/kebun-kopijpg.jpg" },
+                    { crop: "Coklat", image: "/assets/images/images (5).jpg" },
+                    { crop: "Sawit", image: "/assets/images/kebunsawit.jpg" }
+                ],
+                "Kalimantan Timur": [
+                    { crop: "Karet", image: "/assets/images/pngtree-row-of-para-rubber-plantation-in-south-of-thailand-rubber-trees-image_15662390.jpg" },
+                    { crop: "Sawit", image: "/assets/images/kebunsawit.jpg" },
+                    { crop: "Lada", image: "/assets/images/images 6.jpg" }
+                ],
+                "Sulawesi Selatan": [
+                    { crop: "Kakao", image: "/assets/images/images (7).jpg" },
+                    { crop: "Jagung", image: "/assets/images/pexels-flambo-388007-1112080.jpg" },
+                    { crop: "Padi", image: "/assets/images/pexels-tomfisk-1554630.jpg" },
+                ]
+            };
+
+            // Mengambil rekomendasi tanaman sesuai lokasi yang dipilih
+            const plants = recommendations[location] || [];
+
+            // Menampilkan rekomendasi di dalam div
+            recommendationsDiv.innerHTML = `
+                ${plants.map(plant => 
+                    `<div class="plant-box">
+                        <img src="${plant.image}" alt="${plant.crop}" class="plant-image">
+                        <p>${plant.crop}</p>
+                    </div>`
+                ).join("")}
+            `;
+        }
+    </script>
+
+</body>
+</html>

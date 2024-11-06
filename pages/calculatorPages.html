@@ -1,0 +1,220 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Hasil Panen</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="../styles/calcStyles.css">
+    <link rel="stylesheet" href="../styles/global.css">
+</head>
+
+<body>
+    <div class="navbar-scroll" id="navbar-scroll">
+        <div class="navbar-scroll-container">
+            <div class="navbar-left-scroll">
+                TemanPetani
+            </div>
+            <div class="navbar-center-scroll">
+                <a href="../index.html">Beranda</a>
+                <a href="#">Artikel</a>
+                <a href="./calculatorPages.html" class="link-active">Kalkulator</a>
+                <a href="./forumPages.html">Forum</a>
+            </div>
+            <div class="navbar-right-scroll">
+                <a href="../index.html#contactSection">Kontak</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <section class="hitung-hasil-section">
+        <div class="hitung-hasil-container">
+            <div class="hitung-hasil-left">
+                <h2><span style="background-color: #ADECDA;">Hitung</span> Hasil Panen</h2>
+                <p>Perkirakan hasil panen Anda berdasarkan luas lahan, jenis tanaman, jumlah tanaman, kepadatan tanam,
+                    dan estimasi hasil per tanaman.</p>
+            </div>
+
+            <div class="hitung-hasil-right">
+                <div class="form-group" style="position: relative;">
+                    <label for="luas-lahan">Luas Lahan</label>
+                    <input type="number" id="luas-lahan" placeholder="Masukkan luas lahan" required>
+                    <span
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-0%); color: #707070;">M^2</span>
+                </div>
+                <div class="form-group">
+                    <label for="jenis-tanaman">Jenis Tanaman</label>
+                    <select id="jenis-tanaman" required>
+                        <option value="">Pilih Jenis Tanaman</option>
+                        <option value="padi">Padi</option>
+                        <option value="sayuran">Sayuran</option>
+                        <option value="jagung">Jagung</option>
+                        <option value="buah">Buah</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group" style="position: relative;">
+                    <label for="jumlah-tanaman">Jumlah Tanaman</label>
+                    <input type="number" id="jumlah-tanaman" placeholder="Masukkan jumlah tanaman" required>
+                    <span
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-0%); color: #707070;">/M</span>
+                </div>
+
+                <div class="form-group" style="position: relative;">
+                    <label for="kepadatan-tanam">Kepadatan Tanam <span class="info-icon" aria-label="Info">i
+                            <div class="tooltip">Kepadatan tanaman dalam cm per meter.</div>
+                        </span></label>
+                    <input type="number" id="kepadatan-tanam" placeholder="Kepadatan Tanam" required>
+                    <span
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-0%); color: #707070;">/M</span>
+                </div>
+
+                <div class="form-group" style="position: relative;">
+                    <label for="estimasi-hasil">Estimasi Hasil Panen per Tanam <span class="info-icon"
+                            aria-label="Info">i
+                            <div class="tooltip">Estimasi hasil panen per tanaman dalam kilogram.</div>
+                        </span></label>
+                    <input type="number" id="estimasi-hasil" placeholder="Estimasi Hasil Panen" required>
+                    <span
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-0%); color: #707070;">/Kg</span>
+                </div>
+
+                <button class="btn-hitung" id="calculate-btn">Hitung</button>
+            </div>
+        </div>
+
+        <div class="hasil-container">
+            <div class="hasil-box">
+                <p id="hasil-hitung">Perkiraan Hasil Panen</p>
+                <div class="result-box">
+                    <div id="calculation-result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-container">
+          <div class="footer-content">
+            <p class="website-name">TemanPetani</p>
+            <p class="footer-text">Petani sejahtera, negara sejahtera.</p>
+          </div>
+          <div class="footer-content">
+            <p class="website-name">Tentang</p>
+            <div class="footer-links">
+              <a href="../index.html">
+                <p>Beranda</p>
+              </a>
+              <a href="../index.html#aboutSection">
+                <p>Tentang</p>
+              </a>
+              <a href="../index.html#articleSection">
+                <p>Artikel</p>
+              </a>
+              <a href="../index.html#testimonialSection">
+                <p>Testimoni</p>
+              </a>
+              <a href="../index.html#contactSection">
+                <p>Kontak</p>
+              </a>
+            </div>
+          </div>
+          <div class="footer-content">
+            <p class="website-name">Halaman Detail</p>
+            <div class="footer-links">
+              <a href="../index.html">
+                <p>Beranda</p>
+              </a>
+              <a href="#">
+                <p>Artikel</p>
+              </a>
+              <a href="./calculatorPages.html">
+                <p>Kalkulator</p>
+              </a>
+              <a href="./forumPages.html">
+                <p>Forum</p>
+              </a>
+            </div>
+          </div>
+          <div class="footer-content">
+            <p class="website-name">Kontak</p>
+            <div class="footer-links">
+              <a href="info@temanpetani.com">
+                <p>info@temanpetani.com</p>
+              </a>
+              <p>+52 123 654 7890</p>
+              <p>Jl. Tukad Citarum Gang X. No 23</p>
+            </div>
+          </div>
+        </div>
+        <p
+          class="copyright"
+          style="
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            opacity: 0.8;
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+          "
+        >
+          Copyright © <span>TemanPetani</span> | Developed by
+          <span>Pemuda HTML.</span>
+        </p>
+      </section>
+    
+    <script src="../scripts/logicKalkulatorPanen.js"></script>
+    <script>
+        document.getElementById("calculate-btn").addEventListener("click", function() {
+            const luasLahan = parseFloat(document.getElementById("luas-lahan").value);
+            const jarakTanam = parseFloat(document.getElementById("kepadatan-tanam").value);
+            const estimasiHasil = parseFloat(document.getElementById("estimasi-hasil").value);
+            if (isNaN(luasLahan) || isNaN(jarakTanam) || isNaN(estimasiHasil) || jarakTanam <= 0) {
+                document.getElementById("calculation-result").innerText = "Masukkan semua nilai dengan benar.";
+                return;
+            }
+            const totalHasilPanen = (luasLahan / jarakTanam) * estimasiHasil;       
+            const formattedResult = formatHasil(totalHasilPanen);
+            const resultElement = document.getElementById("calculation-result");
+            resultElement.innerText = formattedResult;
+            resultElement.classList.add('animate'); 
+            setTimeout(() => {
+                resultElement.classList.remove('animate'); 
+            }, 2000);
+        });
+        function formatHasil(hasil) {
+            let satuan;
+            let nilai;
+            if (hasil >= 1000) {
+                nilai = (hasil / 1000).toFixed(2); 
+                satuan = "ton";
+            } else if (hasil >= 100) {
+                nilai = (hasil / 100).toFixed(2); 
+                satuan = "q";
+            } else {
+                nilai = hasil.toFixed(2); 
+                satuan = "kg";
+            }
+            return `${formatNumber(nilai)} ${satuan}`; 
+        }
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); 
+        }
+    </script>
+    
+    
+    
+</body>
+
+</html>
