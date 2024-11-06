@@ -28,10 +28,10 @@
                         <div class="topic-header" style="position: relative;">
                             <h5 class="topic-title">${discussion.title}</h5>
                             <div class="edit-discussion" style="cursor: pointer; position: absolute; right: 30px;">
-                                <i class="fas fa-edit"></i>
+                                <i class="bi bi-pencil-square"></i>
                             </div>
                             <div class="delete-discussion" style="cursor: pointer; position: absolute; right: 5px;">
-                                <i class="fas fa-ellipsis-v"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
                             </div>
                         </div>
                         <p class="discussion-content">${displayContent}</p>
@@ -45,7 +45,7 @@
                             <div class="new-comment-card">
                                 <div class="input-container">
                                     <input type="text" class="new-comment" placeholder="Tulis komentar...">
-                                    <button class="send-button add-comment"><i class="fas fa-paper-plane"></i></button>
+                                    <button class="send-button add-comment"><i class="bi bi-send"></i></button>
                                 </div>
                             </div>
                         </div>
