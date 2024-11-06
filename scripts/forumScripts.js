@@ -169,7 +169,7 @@ $(document).ready(function () {
             comments.forEach(comment => {
                 const newComment = `
                 <div class="comment-card">
-                    <img src="https://via.placeholder.com/40" alt="Foto Pengguna" class="comment-profile">
+                    <img src="/assets/images/ppPetanijpg.jpg" alt="Foto Pengguna" class="comment-profile">
                     <div class="comment-content">
                         <div class="comment-name">Anda</div>
                         <p>${comment}</p>
